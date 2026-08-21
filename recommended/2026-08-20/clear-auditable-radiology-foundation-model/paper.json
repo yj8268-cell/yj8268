@@ -1,0 +1,15 @@
+{
+  "id": "clear-auditable-radiology-foundation-model",
+  "title": "CLEAR: an auditable foundation model for radiology grounded in clinical concepts",
+  "authors": ["Tianyu Han", "Riga Wu", "Yu Tian", "Firas Khader", "Lisa C. Adams", "Keno K. Bressem", "Christos Davatzikos", "Jakob Nikolas Kather", "Li Shen", "David A. Mankoff", "Eduardo Mortani Barbosa", "Daniel Truhn"],
+  "venue": "Nature Biomedical Engineering",
+  "year": 2026,
+  "source": "OpenAlex",
+  "url": "https://doi.org/10.1038/s41551-026-01741-4",
+  "abstract": "'Black box' deep learning models for medical image interpretation limit clinical trust and analysis of performance degradation. Here we introduce Concept-Level Embeddings for Auditable Radiology (CLEAR), an auditable foundation model based on clinical concepts. Trained on over 0.87 million image-report pairs from 239,391 patients, CLEAR learns a visual representation and projects chest X-rays into a semantically rich space defined by large language model embeddings, making every prediction decomposable into weighted contributions from individual radiological observations. External validation on four large, physician-annotated datasets from the United States, Europe and Asia shows that CLEAR not only achieves state-of-the-art classification performance but also enables applications: auditable zero-shot pathology detection, systematic identification of radiological confounders and the creation of expert-level concept bottleneck models from data-driven concepts. By integrating clinical knowledge directly into its reasoning process, CLEAR offers a framework for robust model auditing, safer deployment and enhanced physician-AI collaboration, advancing towards trustworthy medical AI.",
+  "axes": ["기관 간 일반화", "모델 해석가능성"],
+  "takeaway": "개념 기반 임베딩으로 흉부 X-ray 소견을 해석 가능하게 예측하면서도, 미국·유럽·아시아 4개 외부 코호트에서 최고 수준의 분류 성능을 달성했다.",
+  "relevance": "우리 코호트는 5개 기관(INST01–05)과 9개 촬영 장비, PA/AP 두 체위가 섞여 있고 흉부 X-ray 소견 라벨이 14종 이상으로 다양해, 기관·장비 간 일반화와 소견별 해석 가능성이 실제로 중요한 문제로 보인다.",
+  "caveat": "본 코호트는 단일 소스(공개 벤치마크 유래)로 보이며 CLEAR가 검증한 것과 같은 다기관 전향적 리더 스터디나 confounder 분석은 수행되지 않았다.",
+  "check": "CLEAR가 제시한 개념 병목 모델을 우리 5개 기관 하위 그룹에 적용했을 때 기관별 성능 격차(장비·체위 confounder 포함)가 재현되는지 확인해볼 만하다."
+}
