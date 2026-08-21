@@ -1,0 +1,15 @@
+{
+  "id": "cf2seg-chest-xray-report-guided-segmentation",
+  "title": "Grounding Radiology Report Findings into Medical Image Segmentation",
+  "authors": ["Suyang Xi", "Songtao Hu", "Shansong Wang", "Hong Ding", "Yuheng Li", "Wenfeng He", "Kuo Zhang", "Luke del Balzo", "Chong Zhong", "Mingzhe Hu", "Catherine C. Liu", "Yunhao Liu"],
+  "venue": "npj Digital Medicine",
+  "year": 2026,
+  "source": "OpenAlex",
+  "url": "https://doi.org/10.1038/s41746-026-03051-0",
+  "abstract": "Routine radiology practice documents abnormalities primarily in narrative reports rather than pixel-level annotations. However, many clinically important analyses require spatially localized evidence. This mismatch limits the reuse of large-scale image-report archives for spatially resolved quantitative analysis, as heterogeneous clinical findings cannot be directly translated into consistent spatial representations. We therefore present Clinical-Findings-Guided Segmentation (CF2Seg), a chest X-ray segmentation framework that learns spatial representations directly from full radiology findings. We further curate a multi-source benchmark comprising 53,386 examinations, each paired with expert spatial annotations and corresponding reports across diverse thoracic pathologies and institutions. CF2Seg uses a dual-stage text–image fusion strategy in which report findings guide feature formation and are revisited during decoding to improve boundary delineation across scales. On a unified multi-source benchmark, CF2Seg achieves strong overall performance and remains stable under clinically realistic variation, including distribution shift, annotation scarcity, and clinically realistic image and report perturbations. Beyond segmentation accuracy, CF2Seg-derived masks preserve proportional lesion-burden trends with strong agreement to expert annotations, supporting retrospective spatial annotation and quantitative reuse of large-scale clinical image–report archives.",
+  "axes": ["기관 간 일반화", "보고서-영상 연계"],
+  "takeaway": "자유 텍스트 판독 소견만으로 흉부 X-ray의 병변을 픽셀 단위로 분할할 수 있으며, 다기관 벤치마크에서 분포 변화와 라벨 희소성에도 안정적인 성능을 보였다.",
+  "relevance": "우리 코호트는 report_text(판독문)와 findings_label이 함께 저장되어 있고 5개 기관, 다양한 흉부 소견(침윤, 무기폐, 결절 등)이 섞여 있어, 보고서 기반 자동 분할이 기존 라벨을 보강하는 데 적용 가능해 보인다.",
+  "caveat": "우리 데이터에는 픽셀 단위 전문가 주석이 없어 CF2Seg가 보고한 분할 정확도나 병변 부담(lesion-burden) 일치도를 직접 재현·검증할 수는 없다.",
+  "check": "우리 기관 간 판독문 서술 스타일 차이가 CF2Seg류 모델의 텍스트-영상 정합 성능에 어떤 영향을 주는지 소규모 파일럿으로 확인해볼 만하다."
+}
